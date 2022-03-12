@@ -1,0 +1,7 @@
+[07-Jul-2019 08:35:54 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/zendfore/fargobnk.co/demofx/Connections/db.php on line 9
+[08-Jul-2019 14:43:14 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/zendfore/fargobnk.co/demofx/Connections/db.php on line 9
+[08-Jul-2019 16:42:23 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/zendfore/fargobnk.co/demofx/Connections/db.php on line 9
+[08-Jul-2019 18:35:32 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/zendfore/fargobnk.co/demofx/Connections/db.php on line 9
+[09-Jul-2019 11:08:46 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/zendfore/fargobnk.co/demofx/Connections/db.php on line 9
+[09-Jul-2019 17:53:16 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/zendfore/fargobnk.co/demofx/Connections/db.php on line 9
+[10-Jul-2019 12:51:08 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/zendfore/fargobnk.co/demofx/Connections/db.php on line 9

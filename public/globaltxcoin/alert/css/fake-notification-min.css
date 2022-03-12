@@ -1,0 +1,11 @@
+/* ========= INFORMATION ============================
+
+	- document:  Fake Notifications - creating effective herd effects
+	- author:    Wow-Company @ Codecanyon
+	- profile:   https://codecanyon.net/user/wow-company
+	- version:   1.1
+	- email:     wow@wow-company.com
+
+==================================================== */
+
+.notification{padding:10px;z-index:9999999999;position:fixed;font-size:12px;font-family:Verdana,sans-serif;display:none;border-style:solid;}.notification-block{position:relative;width:100%;float:left;min-height:1px;white-space:normal;}.notification-img,.notification-text-block{float:left;min-height:1px;white-space:normal;display:inline-block;vertical-align:middle;}.notification-img{height:60px;width:60px;text-align:center;font-size:40px!important;line-height:40px;}.notification-imgimg{width:100%;height:auto;}.notification-text-block{width:200px;padding-left:10px;padding-right:10px;line-height:1.3;}.notification-title{font-weight:bold;}

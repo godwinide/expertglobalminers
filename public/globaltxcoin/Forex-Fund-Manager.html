@@ -1,0 +1,493 @@
+<style>
+    body {
+        margin: 0;
+        line-height: 1.42857143;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .header_1 {
+        width: 100%;
+        float: left;
+    }
+
+    .image {
+        width: 100%;
+        float: left;
+        height: 359px;
+        background-size: 100%;
+        overflow: hidden;
+    }
+
+        .image img {
+            float: left;
+            width: 100%;
+        }
+
+        .image .container {
+            width: 100%;
+            padding-left: 0;
+        }
+
+    .text {
+        float: left;
+        color: white;
+        position: absolute;
+        top: 30px;
+        padding: 0 89px;
+    }
+
+        .text h2 {
+            color: #b50405;
+        }
+
+        .text h3 {
+            font-size: 21px;
+            color: #a8a7a7;
+        }
+
+        .text span {
+            color: #b50405;
+            font-size: 21px;
+            padding: 7px;
+        }
+
+        .text p {
+            padding-top: 22px;
+            color: #a8a7a7;
+            font-size: 14px;
+        }
+
+    .col-md-6.col-sm-7.col-xs-12 {
+        width: 50%;
+    }
+
+    .banner_text a {
+        background: #fff;
+        display: inline-block;
+        border-radius: 4px;
+        font-size: 17px;
+        border-bottom: 2px solid #DB0100;
+        color: #DB0100;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 8px 18px;
+    }
+
+        .banner_text a:hover {
+            color: #fff;
+            border-color: transparent;
+            background: #DB0100;
+            transition: 0.5s;
+        }
+
+
+
+    section.info_section {
+        width: 100%;
+        float: left;
+        background-color: #000000;
+    }
+
+    .text_middle span {
+        color: #db0100;
+    }
+
+    .xtream_phone {
+        float: left;
+        width: 100%;
+        background-color: #f7f7f7;
+    }
+
+        .xtream_phone h1 {
+            text-align: center;
+            color: #000;
+            margin-top: 50px;
+        }
+
+        .xtream_phone span {
+            color: #db0100;
+        }
+
+        .xtream_phone p {
+            padding: 2px 70px;
+            color: #000000;
+            margin: 0 0 0 0;
+        }
+
+        .xtream_phone strong {
+            padding: 0px 0px;
+            color: #000000;
+            font-size: 19px;
+            margin: 0 0 0 0;
+        }
+
+    .col-md-7 {
+        width: 58.33333333%;
+        float: right;
+        margin-top: 59px;
+    }
+
+    .col-md-5 {
+        width: 41.66666667%;
+        float: left;
+    }
+
+    .image_xtream img {
+        width: 500px;
+        position: relative;
+        height: 237px;
+        padding-left: 55%;
+    }
+
+    section.image_2 {
+        width: 100%;
+        float: left;
+    }
+
+    section.dollar_sign {
+        float: left;
+        width: 100%;
+    }
+
+    .xtream_phone2 {
+        float: left;
+        width: 100%;
+        background-color: #e6e7e8;
+    }
+
+    .image_xtream2 img {
+        width: 197px;
+        position: relative;
+        height: 207px;
+        padding-left: 0px;
+        margin-top: 18px;
+    }
+
+
+    .xtream_phone {
+        float: left;
+        width: 100%;
+        background-color: #f7f7f7;
+    }
+
+
+    .img_user {
+        background-image: url(https://secure.idealfx.io/);
+        float: left;
+        width: 100%;
+    }
+
+    .image_xtream2 {
+        width: 0;
+        height: 272px;
+        margin-top: 12px;
+    }
+
+
+    .xtream_phone2 p {
+        float: right;
+        margin: 0px;
+        padding: 10px 100px;
+        width: 100%;
+        text-align: right;
+    }
+
+    .xtream_phone2 .col-md-7.col-sm-7.col-xs-12 {
+        float: left;
+        /* width: 100%; */
+    }
+
+    p.middle {
+        padding-top: 40px;
+    }
+
+    #container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+        height: 350px;
+    }
+
+
+    #firstdiv {
+        background-color: white;
+        padding-bottom: 100px;
+        padding-top: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin: 0px 10px;
+        width: 30%;
+        height: 267px;
+        border-radius: 5px 5px 5px 5px;
+    }
+
+    .orange {
+        background-color: #fc5e00;
+        width: 100%;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        border-radius: 5px 5px 0px 0;
+    }
+
+    #secdiv {
+        background-color: white;
+        padding-bottom: 100px;
+        padding-top: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin: 0px 10px;
+        width: 30%;
+        height: 267px;
+        border-radius: 5px 5px 5px 5px;
+    }
+
+    .yellow {
+        background-color: #fcc500;
+        width: 100%;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        border-radius: 5px 5px 0px 0;
+    }
+
+    #thirddiv {
+        background-color: white;
+        padding-bottom: 100px;
+        padding-top: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin: 0px 10px;
+        width: 30%;
+        height: 267px;
+        border-radius: 5px 5px 5px 5px;
+    }
+
+    .green {
+        background-color: #5a8a4c;
+        width: 100%;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        border-radius: 5px 5px 0px 0;
+    }
+
+    #forthdiv {
+        background-color: white;
+        padding-bottom: 100px;
+        padding-top: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin: 0px 10px;
+        width: 30%;
+        height: 267px;
+        border-radius: 5px 5px 5px 5px;
+    }
+
+    .blue {
+        background-color: #3e5b7b;
+        width: 100%;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        border-radius: 5px 5px 0px 0;
+    }
+</style>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<!-- Mirrored from www.idealfx.io/en/Forex-Fund-Manager.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 May 2020 20:28:22 GMT -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=WINDOWS-1252">
+    <meta content="width=device-width" name="viewport">
+    <meta content="initial-scale=1" name="viewport">
+    <meta name="viewport" content="user-scalable=no, width=device-width">
+    <meta name="google-site-verification" content="PkKikCqopZ6mCU84K72aMOHEozu1WyowiSj_FXba-Bw" />
+    <meta name="description" content="Click Here and know why you should become a Fund Manager with IdealFx. Create an account and show off your trading skills to attract client.">
+    <meta name="keywords" content="Fund Manager, Strategy Provider, Fund Manager Performance, Become a Fund Manager">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+ 	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link crossorigin="anonymous" href="css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/Custom.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet" />
+    <link href="images/fav.png" rel="icon" type="images/fav.png" />
+    <link href="../cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+    <script src="../ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
+    <script type="text/javascript" src="https://secure.idealfx.io/"></script>
+    <script src="../maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link href="../www.atlasestateagents.co.uk/css/tether.min.css" rel="stylesheet" />
+    <script src="../cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.slider').bxSlider();
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            $("#sidebar").load("sideBar.html");
+            $('#footerDiv').load("footer.html");
+
+        });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71591211-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-71591211-1');
+    </script>
+    <title>Become a Fund Manager - IdealFx</title>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="header_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 col-sm-5">
+                        <span>Member of IDEALFX HONG KONG LIMITED</span>
+                    </div>
+                    <div class="col-md-7 col-sm-7 right_drop text-right">
+                        <a target="_blank" class="login-link" href="https://secure.idealfx.io/Account/Login">Member login</a> <a target="_blank" class="mwm_login" href="https://secure.idealfx.io/accounts/live-account-register">Open Live Account</a> <a class="support-link" href="contact.html">Support</a>
+                        <div class="btn-group show-on-hover">
+                            <a class="font-zoom" href="#"></a> <button data-toggle="dropdown" class="dropdown-toggle" type="button">
+                                <!--i class="fa fa-language" aria-hidden="true"&gt;-->English
+                            </button>
+                            <ul role="menu" class="dropdown-menu">
+                                <li> <a href="#">English</a> </li>
+                                <li> <a href="#">Franch</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>		<!--sidebar div start -->
+
+        <div id="sidebar"></div>		<!-- sidebar div end -->
+
+    </div>	<!-- header end -->
+    <body>
+
+
+        <body>
+            <div class="header_1">
+                <div class="image">
+                    <div class="">
+                        <img src="images/main.png" alt="Become Fund Manager" />
+                        <div class="col-md-6 col-sm-7 col-xs-12">
+                            <div class="text">
+                                <h2>BECOME A FUND MANAGER</h2> <h3>BENEFITS OF BEING A <span>XTREAMFOREX</span><br />STRATEGY PROVIDER</h3>
+                                <p class="txt-hide">If you're a Strategy Provider, the Xtreamforex social Trading program is designed with you in mind. You see, 			 our social Trading program gives you the flexibility you need to maximise your trading portfolio.</p>
+                                <div class="banner_text">
+                                    <a class="txt-hide" target="_blank" href="https://secure.idealfx.io/">Become Fund Manager</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!---banner_sec--><section class="dollar_sign">
+                <div class="xtream_phone">
+                    <div class="container">
+                        <h1>Here is why you should become a <span>IdealFx</span> Fund Manager</h1>
+                        <div class="col-md-7 col-sm-7 col-xs-12 mg-top">
+                            <p><strong>Performance fee up to 50%</strong></p><br />
+                            <p>Given that a Strategy Provider has positive results, he is <br />eligible to receive a fee from his Followers.</p>
+                        </div>
+                        <div class="col-md-5 col-sm-5 col-xs-12">
+                            <div class="image_xtream">
+                                <img src="images/dollar.png" alt="Fund Manger Fee" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>	 <!---dollar_sign--> 	 <section class="image_2">
+                <div class="xtream_phone2">
+                    <div class="container">
+                        <div class="col-md-7 col-sm-7 col-xs-12 mg-top">
+                            <p><strong>Show off trading knowledge</strong></p><br />
+                            <p>Strategy provider profiles and results are displayed on a<br />performance table through which Followers can compare,<br />			 monitor and choose.</p>
+                        </div>
+                        <div class="col-md-5 col-sm-5 col-xs-12">
+                            <div class="image_xtream2">
+                                <img src="images/Layer%2054.png" alt="Show off Trading Skills" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>	 <!---image_2--> 	 <section class="dollar_sign">
+                <div class="xtream_phone">
+                    <div class="container">
+                        <div class="col-md-7 col-sm-7 col-xs-12 mg-top">
+                            <p><strong>Automated calculations</strong></p><br />
+                            <p>From the moment a Follower selects Volume Allocation &amp;<br />Rescue Level, all amount calculations are taken care<br />off, automatically.</p>
+                        </div>
+                        <div class="col-md-5 col-sm-5 col-xs-12">
+                            <div class="image_xtream">
+                                <img src="images/calculator%20(1).png" alt="Automated calculations" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>	 <!---dollar_sign--> 	 	 	 <!--- end_of_upper-section--> 	 <section class="info_section">
+                <div class="container">
+                    <div class="text_middle">
+                        <h2 style="text-align: center; color: rgb(255, 255, 255); margin-bottom: 50px; margin-top: 50px;">Take it step by step</h2>
+                    </div>
+
+                    <div class="showdiv" >
+                        <img class="responsive" src="images/fnd01.png" />
+                    </div>
+                    <div id="container" class="cstm-display">
+                        <div id="firstdiv">
+                            <div class="orange">
+                                <p align="center"><img width="80px" src="images/one.png" alt="Create Strategy" /></p>
+                            </div>
+                            <p align="center" class="middle">1.Create your strategy<br />account</p>
+                        </div>
+                        <div id="secdiv">
+                            <div class="yellow">
+                                <p align="center"><img width="80px" src="images/two.png" alt="Fund your Account" /></p>
+                            </div>
+                            <p align="center" class="middle">2.Fund Your<br />account</p>
+                        </div>
+                        <div id="thirddiv">
+                            <div class="green">
+                                <p align="center"><img width="95px" src="images/three.png" alt="Show your Skills" /></p>
+                            </div>
+                            <p align="center" class="middle">3.Trade to show your<br />skills &amp; attract Followers</p>
+                        </div>
+                        <div id="forthdiv">
+                            <div class="blue">
+                                <p align="center"><img width="90px" src="images/four.png" alt="Performance Fee" /></p>
+                            </div>
+                            <p align="center" class="middle">4.Receive Performance<br />Fee</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="live_links">
+                <a target="_blank" href="https://secure.idealfx.io/">Become Fund Manager</a> <span>or</span> <a target="_blank" href="https://secure.idealfx.io/">Become Investor</a>
+            </div>
+            <div id="footerDiv">
+                &nbsp;
+            </div>
+        </body>

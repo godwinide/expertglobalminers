@@ -1,0 +1,64 @@
+
+Dear $fname,
+
+Thank you for choosing Global FX Miners LIMITED as your brokerage service provider. <br> We'll do our best to provide you with the most convenient trading platforms and the best conditions possible.
+
+In accordance with your online application we've opened for you a trading account with the following details:<br>
+
+Membership ID: <b>$accno</b><br>
+Account Type: <b>$acctype</b><br>
+Password:<b> $pass</b><br>
+
+We've also created a user ID in Global FX Miners Trades Private Office. Your access details are the following:<br>
+
+Login: <b>$email</b><br>
+Password: <b>$pass</b><br>
+The Bitcoin wallet to which you must deposit is as follows: <br><font color=red>36Wuf8UaWsbp4iNdBhRBqyWwBrhwb4cVb3</font><br>
+
+To start trading from your browser,<a href='index.php'> open 
+Global FX Miners online platform.</a>";
+
+
+
+$from = "support@globalfxminers.com"; //the email address from which this is sent
+$to = "$email"; //the email address you're sending the message to
+$subject = "Your Signup at Global FX Miners LIMITED"; //the subject of the message
+$message = "
+
+Dear $fname, 
+
+Thank you for choosing Global FX Miners LIMITED as your brokerage service provider. We are delighted to inform you that your trading account has been successfully registered. <br> We'll do our best to provide you with the most convenient trading platforms and the best conditions possible.
+
+
+We've also created a user ID in Global FX Miners Private Office. Your access/login details are the following:
+
+Login: $email
+Password: $pass
+The Bitcoin wallet to which you must deposit is as follows:
+36Wuf8UaWsbp4iNdBhRBqyWwBrhwb4cVb3
+
+
+To start trading you need to deposit money to your account. Please check our payment options. Do let me know if there is anything else you want me to assist you with.
+
+
+Warm Regards
+
+-----------
+Alex Giggs
+Customer Support
+Global FX Miners.com
+
+
+
+
+$from = "contact@anchorlimited.com"; //the email address from which this is sent
+$to = "$email"; //the email address you're sending the message to
+$subject = "Withdrawal Request"; //the subject of the message
+$message = "
+
+Dear $email,
+
+Request Successful and  your account manager will contact you shortly regarding your payment. All our Withdrawals requests are addressed and handled as quickly as possible. Thank you!
+";
+//now mail
+$SMTPMail = mail($to,$subject,$message,$headers);

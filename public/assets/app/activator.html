@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Activator</title>
+ <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+ <div class="container">
+ <div class="row">
+ <div class="col-xs-12"><h2>Please activate your application before use</h2>
+ </div>
+
+ <div class="tab-pane fade active in" role="tabpanel" id="home" aria-labelledby="home-tab">
+ <h3>* Please be sure you are connected to the Internet</h3>
+ <div>
+ <div class="form-group">
+ <label for="exampleInputEmail1">Username</label>
+ <input type="text" class="form-control" autofocus id="txtuser" placeholder="Username">
+ </div>
+ <div class="form-group">
+ <label for="exampleInputPassword1">Password</label>
+ <input type="password" class="form-control" id="txtpass" placeholder="Password">
+ </div>
+ <div class="form-group">
+ <label for="exampleInputFile">Web Activator</label>
+ <input type="text" value="" placeholder="URL WEB SERVER" class="form-control" id="txtweb">
+ </div>
+ <button type="submit" id="btnonline" class="btn btn-default">Submit</button>
+ </div>
+ </div>
+
+ <div class="col-xs-12" id="result"></div>
+
+ </div>
+
+ <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+ <script type="text/javascript">
+ $(document).on("click","#btnonline",function(){
+ var nama = $("#txtuser").val();
+ var pass = $("#txtpass").val();
+ var url = $("#txtweb").val();
+ var value = {
+ nama:nama,
+ password:pass,
+ url:url,
+ method : "online",
+ };
+ $.ajax(
+ {
+ url : "c_activator.php",
+ type: "POST",
+ data : value,
+ success: function(data, textStatus, jqXHR)
+ {
+ var data = jQuery.parseJSON(data);
+ if(data.value == true)
+ {
+ $("#result").html("<h2>Application active!!, Thank you</h2><p>You can login from <a href='index.php'>this link</a>");
+ $("#xtabbs").html("");
+ }else
+ {
+ $("#result").html("Sorry, failed to activate your application");
+ }
+
+ },
+ error: function(jqXHR, textStatus, errorThrown)
+ {
+ $("#result").html("error");
+ 
+ }
+ });
+ })
+ 
+ </script>
+ </body>
+ </html>

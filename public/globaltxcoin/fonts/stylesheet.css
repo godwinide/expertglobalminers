@@ -1,0 +1,59 @@
+@font-face {
+	font-family: 'Calibri';
+	src: url('Calibri-BoldItalic.eot');
+	src: url('Calibri-BoldItalicd41dd41d.eot?#iefix') format('embedded-opentype'),
+		url('Calibri-BoldItalic.woff') format('woff'),
+		url('Calibri-BoldItalic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Calibri';
+	src: url('Calibri-Italic.eot');
+	src: url('Calibri-Italicd41dd41d.eot?#iefix') format('embedded-opentype'),
+		url('Calibri-Italic.woff') format('woff'),
+		url('Calibri-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Calibri';
+	src: url('Calibri-Light.eot');
+	src: url('Calibri-Lightd41dd41d.eot?#iefix') format('embedded-opentype'),
+		url('Calibri-Light.woff') format('woff'),
+		url('Calibri-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Calibri';
+	src: url('Calibri-LightItalic.eot');
+	src: url('Calibri-LightItalicd41dd41d.eot?#iefix') format('embedded-opentype'),
+		url('Calibri-LightItalic.woff') format('woff'),
+		url('Calibri-LightItalic.ttf') format('truetype');
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Calibri';
+	src: url('Calibri-Bold.eot');
+	src: url('Calibri-Boldd41dd41d.eot?#iefix') format('embedded-opentype'),
+		url('Calibri-Bold.woff') format('woff'),
+		url('Calibri-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Calibri';
+	src: url('Calibri.eot');
+	src: url('Calibrid41dd41d.eot?#iefix') format('embedded-opentype'),
+		url('Calibri.woff') format('woff'),
+		url('Calibri.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
