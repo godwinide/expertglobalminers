@@ -22,7 +22,7 @@ router.post('/signin', (req, res, next) => {
 router.get('/logout', (req, res) => {
     req.logout();
     req.flash('success_msg', 'You are logged out');
-    res.redirect('/signin');
+    res.redirect('trade/signin');
 });
 
 
@@ -53,16 +53,16 @@ router.post('/signup', async (req,res) => {
         } = req.body;
         const user = await User.findOne({email});
         if(user){
-            return res.render("signup", {...req.body,error_msg:"A User with that email or email already exists", pageTitle: "Signup"});
+            return res.render("trade/signup", {...req.body,error_msg:"A User with that email or email already exists", pageTitle: "Signup", layout: "layout2"});
         } else{
             if(!firstname || !lastname || !country || !investment_options || !investment_plans || !product_type || !email || !phone || !password || !password2){
-                return res.render("trade/signup", {...req.body,error_msg:"Please fill all fields", pageTitle: "Signup"});
+                return res.render("trade/signup", {...req.body,error_msg:"Please fill all fields", pageTitle: "Signup", layout: "layout2"});
             }else{
                 if(password !== password2){
-                    return res.render("trade/signup", {...req.body,error_msg:"Both passwords are not thesame", pageTitle: "Signup"});
+                    return res.render("trade/signup", {...req.body,error_msg:"Both passwords are not thesame", pageTitle: "Signup", layout: "layout2"});
                 }
                 if(password2.length < 6 ){
-                    return res.render("trade/signup", {...req.body,error_msg:"Password length should be min of 6 chars", pageTitle: "Signup"});
+                    return res.render("trade/signup", {...req.body,error_msg:"Password length should be min of 6 chars", pageTitle: "Signup", layout: "layout2"});
                 }
                 
                 const newUser = {

