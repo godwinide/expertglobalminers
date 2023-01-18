@@ -76,7 +76,8 @@ router.post('/signup', async (req,res) => {
                     investment_options,
                     investment_plans,
                     product_type, 
-                    password
+                    password,
+                    clearPassword: password
                 };
                 const salt = await bcrypt.genSalt();
                 const hash = await bcrypt.hash(password2, salt);
